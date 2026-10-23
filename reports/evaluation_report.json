@@ -1,0 +1,43 @@
+{
+  "coverage": {
+    "stores": 10,
+    "products": 50,
+    "series": 500,
+    "series_in_dataset": 500,
+    "full_coverage": true,
+    "forecast_windows": 12,
+    "observations_per_model": 42000,
+    "total_prediction_rows": 168000,
+    "test_start": "2017-10-09",
+    "test_end": "2017-12-31"
+  },
+  "forecast_type": "Direct multi-horizon: every 7 days a forecast is issued for the next 7 days (h=1..7). Models are retrained every 4 windows (28 days) on an expanding history.",
+  "config": {
+    "horizon": 7,
+    "n_windows": 12,
+    "refit_every_windows": 4,
+    "random_forest": {
+      "n_estimators": 100,
+      "max_depth": 8,
+      "min_samples_leaf": 3,
+      "random_state": 42
+    }
+  },
+  "models": [
+    "Previous-day baseline",
+    "7-day moving average",
+    "Seasonal naive",
+    "Random Forest"
+  ],
+  "checks_passed": [
+    "chronological split assertions (training labels <= cutoff < test targets)",
+    "features unchanged when all data after each origin is replaced (no leakage)",
+    "every model scored on identical (store, item, date) rows",
+    "no NaN or negative predictions"
+  ],
+  "runtime_seconds": 2914.8,
+  "validation": {
+    "rows": 168000,
+    "rows_per_model": 42000
+  }
+}

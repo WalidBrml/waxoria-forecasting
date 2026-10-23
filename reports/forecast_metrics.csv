@@ -1,0 +1,3 @@
+model,MAE,RMSE
+Previous-day baseline,5.944444444444445,7.359800721939872
+Seven-day moving average,4.33968253968254,5.501679809442166
