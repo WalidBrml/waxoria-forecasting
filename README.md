@@ -1,8 +1,10 @@
-﻿# Waxoria — Demand Forecasting & Inventory Intelligence
+# Waxoria — Demand Forecasting & Inventory Intelligence
+
+🚀 **[Launch the Live Dashboard](https://waxoria-forecasting.streamlit.app)**
 
 Waxoria is a Python-based retail analytics project combining demand forecasting, sales analytics, model evaluation, and inventory recommendations in an interactive Streamlit dashboard.
 
-## Features
+## Dashboard Features
 
 - **Executive Overview:** Sales KPIs and forecasting performance.
 - **Sales Intelligence:** Sales trends, seasonality, and store/product rankings.
@@ -38,7 +40,7 @@ python -m venv .venv
 python -m pip install -r requirements.txt
 ```
 
-## Run the Dashboard
+## Run the Dashboard Locally
 
 ```powershell
 python -m streamlit run app/dashboard.py
@@ -58,4 +60,4 @@ Validate results with real operational data before using recommendations for pur
 
 ## Author
 
-Walid — Data Science and Machine Learning portfolio project.
+**Walid** — Data Science and Machine Learning portfolio project.
